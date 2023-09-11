@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./media_queries.css");
+
+/* || General */
+body {
+  font-size: var(--fs-normal);
+  font-family: "Red Hat Text", sans-serif;
+  display: grid;
+  min-height: 100vh;
+  color: var(--clr-desRed);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+/* logo */
+.logo {
+  margin-block: 2em;
+}
+
+:is(.logo-img, .hero-img) {
+  margin: 0 auto;
+}
+
+.wrapper {
+  text-align: center;
+  margin-block: 2em 0;
+}
+.wrapper .title {
+  text-transform: uppercase;
+}
+.title-para {
+  margin-inline: 1em;
+}
+
+/* form */
+.form {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.email-input {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.email {
+  outline: none;
+  border: 1px solid var(--clr-desRed);
+  width: 80%;
+  padding-block: 0.5rem;
+  border-radius: 1.5em;
+  margin-block-start: 1.5em;
+}
+.error-wrapper {
+  position: absolute;
+  top: 35%;
+  right: 30%;
+}
+.icon-error {
+  border-radius: 50%;
+  display: none;
+} 
+
+/* btn */
+
+.arrow-wrapper {
+padding: 0.8em 1.5em;
+background:linear-gradient(
+    135deg,
+      hsl(0, 80%, 86%),
+        hsl(0, 74%, 74%)
+);
+border-radius: 2.5rem;
+position: absolute;
+top: 20px;
+right: 10%;
+border: none;
+cursor: pointer;
+}
+
+
+/* errors */
+
+.form.error .email {
+  border-color: var(--clr-softRed);
+}
+
+.error-msg {
+  color: var(--clr-softRed);
+  display: block;
+  margin-block-start: 0.5em;
+}
+
+.success {
+  border-color: var(-clr-GrayishRed);
+}
